@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Visual Memory Game!</h1>
+    
+    <!-- Game -->
+    <div id="pre_game">
+        <!-- visualizzare solo prima del  gioco, nascondere dopo -->
+        <h2>Sei pronto?</h2>
+        <h3>Memorizza la posizione dei quadrati</h3>
+        <button id="start_game" onclick="startGame()">Start</button>
+    </div>
+
+    <main id="game">
+        <section id="info_game">
+            <!-- livello : x -->
+            <h2>Livello: </h2>
+            <h2 id="level_value">X</h2>
+        </section>
+
+        <section id="cards_container">
+            <div id="cards">
+                <!-- aggiunge le carte con js -->
+            </div>
+        </section>
+    </main>
+
+    <div id="vittoria">
+        <h2>Complimenti!</h2>
+        <h3>Hai Vinto.</h3>
+        <button id="restart_game" onclick="startGame()">Restart</button>
+    </div>
+
+    <div id="sconfitta">
+        <h2>Peccato!</h2>
+        <h3>Hai perso.</h3>
+        <button class="restart_game" onclick="startGame()">Restart</button>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
